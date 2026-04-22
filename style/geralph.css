@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 
 *{
@@ -14,7 +13,7 @@
     --destaque:rgba(19, 20, 29, 0.829);
     --fundo:rgba(221, 167, 145, 0.082);
     --link:beige;
-    --titulo:"Lora", serif;
+    --titulo:serif;
     --texto:"Jost", sans-serif;
 }
 
@@ -24,18 +23,16 @@ body{
 }
 
 
-header{
-    /* background-image: linear-gradient(to left, #45636B 70%, #1A1A1A 30%); */
-  
+header{  
     position: fixed;
     backdrop-filter: blur(4px);
-  width: 100%;
- display: flex;
- flex-flow: row wrap;
- align-items: end;
- justify-content: space-between;
- font-family: var(--titulo);
- padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: end;
+    justify-content: space-between;
+    font-family: var(--titulo);
+    padding: 10px;
 }
 
 header img{
@@ -66,13 +63,13 @@ header>nav a{
     width: 80px;
     display: block;
     color: var(--link);
+    transition-duration: 0.4s;
 }
 
 nav a:hover{
-    background-color: var(--link);
-    color: var(--destaque);
     font-variant: small-caps;
     font-style: italic;
+    opacity: 0.6;
 }
 
 
@@ -134,27 +131,17 @@ section#servicos>div img{
   width: 60px;
 }
 
-section#servicos div:hover{
-    background-color: var(--destaque);
-    font-variant: small-caps;
-    font-style: italic;
-}
-
 /* config da section Quem somos e os seus elementos*/
 section#sobre_a_empresa{
     grid-area:3/2/4/3;
     margin-bottom: 70px ;
 }
 
-
-
 /* config da section contacto*/
 section#contacto{
     grid-area:4/2/5/3;
     margin-bottom: 70px ;
 }
-
-
 
 footer{
     margin-top: 10px;
@@ -169,7 +156,6 @@ footer>p>a{
     text-decoration: none;
     color: var(--link);
 }
-
 
 @media screen and (max-width: 700px) {
     section.hero{
